@@ -45,15 +45,23 @@
 <body class="text-white font-sans">
 
   <!-- Navbar -->
-  <header class="flex justify-between items-center px-10 py-5">
-    <div class="text-xl font-bold glow">Σ SIGMANATION</div>
-    <nav class="space-x-6 text-gray-300">
-      <a href="#" class="hover:text-white transition">Özellikler</a>
-      <a href="#" class="hover:text-white transition">Sıralama</a>
-      <a href="#" class="hover:text-white transition">Seviyeler</a>
-      <a href="#" class="hover:text-white transition">Etkinlikler</a>
-      <a href="#" class="hover:text-white transition">Topluluk</a>
+  <header class="flex justify-between items-center px-10 py-5 backdrop-blur-md bg-white/5 border-b border-white/10">
+    
+    <!-- Logo -->
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-bold">Σ</div>
+      <div class="text-lg font-semibold tracking-wide text-gray-200">SIGMANATION</div>
+    </div>
+
+    <!-- Nav Links -->
+    <nav class="flex gap-8 text-gray-400 text-sm">
+      <a href="#" class="relative hover:text-white transition after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-cyan-400 after:transition-all hover:after:w-full">Özellikler</a>
+      <a href="#" class="relative hover:text-white transition after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-cyan-400 after:transition-all hover:after:w-full">Sıralama</a>
+      <a href="#" class="relative hover:text-white transition after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-cyan-400 after:transition-all hover:after:w-full">Seviyeler</a>
+      <a href="#" class="relative hover:text-white transition after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-cyan-400 after:transition-all hover:after:w-full">Etkinlikler</a>
+      <a href="#" class="relative hover:text-white transition after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-cyan-400 after:transition-all hover:after:w-full">Topluluk</a>
     </nav>
+
   </header>
 
   <!-- Hero -->
