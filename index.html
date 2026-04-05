@@ -1,73 +1,121 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>SigmaNation</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sigmanation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: radial-gradient(circle at top, #0b0f2a, #050816);
+      overflow-x: hidden;
+    }
+
+    /* Glow animation */
+    .glow {
+      text-shadow: 0 0 10px rgba(0,255,255,0.7), 0 0 20px rgba(0,255,255,0.5);
+      animation: pulse 2s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from { text-shadow: 0 0 10px rgba(0,255,255,0.5); }
+      to { text-shadow: 0 0 25px rgba(0,255,255,1); }
+    }
+
+    /* Floating animation */
+    .float {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    /* Fade in */
+    .fade-in {
+      animation: fadeIn 1.5s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+  </style>
 </head>
-<body>
+<body class="text-white font-sans">
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="logo">SIGMANATION</div>
-
-    <nav>
-      <a href="#features">Özellikler</a>
-      <a href="#leaderboard">Sıralama</a>
-      <a href="#events">Seviyeler</a>
-      <a href="#community">Topluluk</a>
+  <!-- Navbar -->
+  <header class="flex justify-between items-center px-10 py-5">
+    <div class="text-xl font-bold glow">Σ SIGMANATION</div>
+    <nav class="space-x-6 text-gray-300">
+      <a href="#" class="hover:text-white transition">Özellikler</a>
+      <a href="#" class="hover:text-white transition">Sıralama</a>
+      <a href="#" class="hover:text-white transition">Seviyeler</a>
+      <a href="#" class="hover:text-white transition">Etkinlikler</a>
+      <a href="#" class="hover:text-white transition">Topluluk</a>
     </nav>
-
-    <div class="actions">
-      <button onclick="goDiscord()">Giriş Yap</button>
-      <button class="primary" onclick="goJoin()">Katıl</button>
-    </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <p class="badge">Türkiye'nin #1 Geometry Dash Topluluğu</p>
-
-    <h1>
-      GEOMETRY DASH<br>
-      <span>SIGMANATION</span>
+  <!-- Hero -->
+  <section class="text-center mt-20 px-6 fade-in">
+    <p class="text-sm text-cyan-400 mb-3">Türkiye'nin #1 Geometry Dash Topluluğu</p>
+    <h1 class="text-5xl md:text-6xl font-extrabold tracking-widest mb-4 float">
+      <span class="bg-gradient-to-r from-pink-500 to-orange-400 bg-clip-text text-transparent">
+        SIGMANATION
+      </span>
     </h1>
-
-    <p class="desc">
-      Rekorları kır, seviyeleri fethet, efsane ol.
+    <p class="text-gray-400 max-w-xl mx-auto mb-8">
+      Rekorları kır, seviyeleri fethet, efsane ol. Sigmanation ile GD dünyasında yeni bir çağ başlıyor.
     </p>
 
-    <div class="buttons">
-      <button class="primary" onclick="goJoin()">Topluluğa Katıl</button>
-      <button onclick="goDiscord()">Discord Sunucusu</button>
-    </div>
-
-    <!-- STATS -->
-    <div class="stats">
-      <div><h2>12.847</h2><p>Üye</p></div>
-      <div><h2>3.420</h2><p>Seviye</p></div>
-      <div><h2>89.542</h2><p>Tamamlama</p></div>
-      <div><h2>156</h2><p>Etkinlik</p></div>
+    <div class="flex justify-center gap-4">
+      <button class="px-6 py-3 bg-cyan-500 text-black rounded-xl hover:scale-110 transition">Topluluğa Katıl</button>
+      <button class="px-6 py-3 border border-gray-600 rounded-xl hover:bg-white hover:text-black transition">Discord Sunucusu</button>
     </div>
   </section>
 
-  <!-- SECTIONS -->
-  <section id="features">
-    <h2>Özellikler</h2>
+  <!-- Stats -->
+  <section class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mt-20 px-10 fade-in">
+    <div class="hover:scale-110 transition">
+      <p class="text-3xl font-bold text-cyan-400">12.847</p>
+      <p class="text-gray-400">Üye</p>
+    </div>
+    <div class="hover:scale-110 transition">
+      <p class="text-3xl font-bold text-cyan-400">3.420</p>
+      <p class="text-gray-400">Seviye</p>
+    </div>
+    <div class="hover:scale-110 transition">
+      <p class="text-3xl font-bold text-cyan-400">89.542</p>
+      <p class="text-gray-400">Tamamlama</p>
+    </div>
+    <div class="hover:scale-110 transition">
+      <p class="text-3xl font-bold text-cyan-400">156</p>
+      <p class="text-gray-400">Etkinlik</p>
+    </div>
   </section>
 
-  <section id="leaderboard">
-    <h2>Sıralama</h2>
+  <!-- Sections -->
+  <section class="mt-20 px-10">
+    <div id="content" class="text-center text-gray-300 fade-in">
+      Bir menü seçin.
+    </div>
   </section>
 
-  <section id="events">
-    <h2>Seviyeler</h2>
-  </section>
+  <script>
+    const links = document.querySelectorAll('nav a');
+    const content = document.getElementById('content');
 
-  <section id="community">
-    <h2>Topluluk</h2>
-  </section>
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const text = link.textContent;
 
-  <script src="script.js"></script>
+        content.innerHTML = `<h2 class=\"text-2xl text-white mb-2 glow\">${text}</h2>
+        <p class=\"fade-in\">${text} sayfası içeriği burada olacak.</p>`;
+      });
+    });
+  </script>
+
 </body>
 </html>
