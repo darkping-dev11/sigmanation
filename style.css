@@ -1,38 +1,31 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 body {
-  background: radial-gradient(circle at top, #0b0f2a, #050714);
+  margin: 0;
+  font-family: Arial;
+  background: radial-gradient(circle at top, #0b0f2a, #050816);
   color: white;
-  overflow-x: hidden;
 }
 
 /* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 20px 40px;
+  align-items: center;
+}
+
+.navbar nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #aaa;
+}
+
+.navbar nav a:hover {
+  color: white;
 }
 
 .logo {
   font-weight: bold;
-  font-size: 20px;
-}
-
-nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #aaa;
-  font-size: 14px;
-}
-
-nav a:hover {
-  color: white;
+  letter-spacing: 2px;
 }
 
 .actions button {
@@ -40,28 +33,17 @@ nav a:hover {
 }
 
 /* BUTTONS */
-.primary {
-  background: linear-gradient(90deg, #00d4ff, #7a5cff);
+button {
+  padding: 10px 16px;
   border: none;
-  padding: 10px 18px;
   border-radius: 8px;
+  background: #222;
   color: white;
   cursor: pointer;
 }
 
-.secondary {
-  background: transparent;
-  border: 1px solid #555;
-  padding: 10px 18px;
-  border-radius: 8px;
-  color: white;
-  cursor: pointer;
-}
-
-.ghost {
-  background: transparent;
-  border: none;
-  color: #aaa;
+button.primary {
+  background: linear-gradient(90deg, #00d4ff, #ff4fd8);
 }
 
 /* HERO */
@@ -70,58 +52,36 @@ nav a:hover {
   padding: 100px 20px;
 }
 
-.badge {
-  display: inline-block;
-  background: rgba(0,255,200,0.1);
-  padding: 6px 12px;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  font-size: 12px;
-  color: #0ff;
-}
-
 .hero h1 {
   font-size: 60px;
-  letter-spacing: 2px;
 }
 
-.hero h1 span {
-  background: linear-gradient(90deg, #ff4ecd, #ff9a3c);
+.hero span {
+  background: linear-gradient(90deg, #ff4fd8, #ffb84f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.hero p {
-  margin-top: 20px;
-  color: #aaa;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+.badge {
+  color: #0ff;
 }
 
-/* BUTTON GROUP */
 .buttons {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
-.buttons button {
-  margin: 10px;
-}
-
-/* STATS */
 .stats {
   display: flex;
   justify-content: center;
   gap: 50px;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 .stats h2 {
-  font-size: 28px;
-  color: #7df9ff;
+  color: #4fd1ff;
 }
 
-.stats p {
-  color: #777;
-  font-size: 14px;
+/* SECTIONS */
+section {
+  padding: 100px 40px;
 }
