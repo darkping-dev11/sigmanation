@@ -8,17 +8,13 @@
   <style>
     body {
       background: radial-gradient(circle at top, #0b0f2a, #050816);
-      overflow-x: hidden;
     }
-
     .glow {
       text-shadow: 0 0 6px rgba(0,255,255,0.4), 0 0 12px rgba(0,255,255,0.25);
     }
-
     .float {
       animation: float 6s ease-in-out infinite;
     }
-
     @keyframes float {
       0%,100% { transform: translateY(0); }
       50% { transform: translateY(-15px); }
@@ -27,10 +23,8 @@
 </head>
 <body class="text-white font-sans">
 
-  <!-- Navbar (SABİT) -->
+  <!-- Navbar -->
   <header class="flex justify-between items-center px-10 py-5 backdrop-blur-md bg-white/5 border-b border-white/10">
-    
-    <!-- Logo -->
     <div class="flex items-center gap-3">
       <div class="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-bold">Σ</div>
       <div class="flex items-end gap-2">
@@ -39,96 +33,72 @@
       </div>
     </div>
 
-    <!-- Nav -->
     <nav class="flex gap-10 text-gray-300 text-base font-medium">
-      <a href="#" data-page="home" class="nav-link hover:text-white hover:scale-110 transition duration-200">Ana Sayfa</a>
-      <a href="#" data-page="ozellikler" class="nav-link hover:text-white hover:scale-110 transition duration-200">Özellikler</a>
-      <a href="#" data-page="siralama" class="nav-link hover:text-white hover:scale-110 transition duration-200">Sıralama</a>
-      <a href="#" data-page="seviyeler" class="nav-link hover:text-white hover:scale-110 transition duration-200">Seviyeler</a>
-      <a href="#" data-page="etkinlikler" class="nav-link hover:text-white hover:scale-110 transition duration-200">Etkinlikler</a>
-      <a href="#" data-page="topluluk" class="nav-link hover:text-white hover:scale-110 transition duration-200">Topluluk</a>
+      <a href="index.html" class="hover:text-white hover:scale-110 transition">Ana Sayfa</a>
+      <a href="ozellikler.html" class="hover:text-white hover:scale-110 transition">Özellikler</a>
+      <a href="siralama.html" class="hover:text-white hover:scale-110 transition">Sıralama</a>
+      <a href="seviyeler.html" class="hover:text-white hover:scale-110 transition">Seviyeler</a>
+      <a href="etkinlikler.html" class="hover:text-white hover:scale-110 transition">Etkinlikler</a>
+      <a href="topluluk.html" class="hover:text-white hover:scale-110 transition">Topluluk</a>
     </nav>
-
   </header>
 
-  <!-- CONTENT (DEĞİŞEN ALAN) -->
-  <main id="app"></main>
+  <!-- HERO -->
+  <section class="text-center mt-16 px-6">
+    <p class="text-sm text-cyan-400 mb-3">Türkiye'nin #1 Geometry Dash Topluluğu</p>
+    <h1 class="text-6xl md:text-7xl font-extrabold tracking-widest mb-6 float">
+      <span class="bg-gradient-to-r from-pink-500 to-orange-400 bg-clip-text text-transparent">
+        SIGMANATION
+      </span>
+    </h1>
+    <p class="text-gray-400 max-w-xl mx-auto mb-10 text-lg">
+      Rekorları kır, seviyeleri fethet, efsane ol.
+    </p>
+  </section>
 
-  <script>
-    const app = document.getElementById("app");
+  <!-- STATS -->
+  <section class="flex justify-center gap-14 text-center mt-10">
+    <div>
+      <p class="text-5xl font-extrabold text-cyan-400 glow">12.847</p>
+      <p class="text-gray-400">Üye</p>
+    </div>
+    <div>
+      <p class="text-5xl font-extrabold text-cyan-400 glow">3.420</p>
+      <p class="text-gray-400">Seviye</p>
+    </div>
+    <div>
+      <p class="text-5xl font-extrabold text-cyan-400 glow">89.542</p>
+      <p class="text-gray-400">Tamamlama</p>
+    </div>
+    <div>
+      <p class="text-5xl font-extrabold text-cyan-400 glow">156</p>
+      <p class="text-gray-400">Etkinlik</p>
+    </div>
+  </section>
 
-    function render(page) {
-      if (page === "home") {
-        app.innerHTML = `
-        <section class="text-center mt-16 px-6">
-          <p class="text-sm text-cyan-400 mb-3">Türkiye'nin #1 Geometry Dash Topluluğu</p>
-          <h1 class="text-6xl md:text-7xl font-extrabold tracking-widest mb-6 float">
-            <span class="bg-gradient-to-r from-pink-500 to-orange-400 bg-clip-text text-transparent">
-              SIGMANATION
-            </span>
-          </h1>
-          <p class="text-gray-400 max-w-xl mx-auto mb-10 text-lg">
-            Rekorları kır, seviyeleri fethet, efsane ol.
-          </p>
-        </section>
+  <!-- ALT BÖLÜM -->
+  <section class="grid md:grid-cols-2 gap-10 mt-20 px-10 max-w-6xl mx-auto">
 
-        <section class="flex justify-center gap-14 text-center mt-12">
-          <div>
-            <p class="text-5xl font-extrabold text-cyan-400 glow">12.847</p>
-            <p class="text-gray-400">Üye</p>
-          </div>
-          <div>
-            <p class="text-5xl font-extrabold text-cyan-400 glow">3.420</p>
-            <p class="text-gray-400">Seviye</p>
-          </div>
-          <div>
-            <p class="text-5xl font-extrabold text-cyan-400 glow">89.542</p>
-            <p class="text-gray-400">Tamamlama</p>
-          </div>
-          <div>
-            <p class="text-5xl font-extrabold text-cyan-400 glow">156</p>
-            <p class="text-gray-400">Etkinlik</p>
-          </div>
-        </section>
-                
-        <section class="mt-16 px-10">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto text-center">
-            <div class="p-6 bg-white/5 rounded-2xl border border-white/10 hover:scale-105 transition">
-              <h3 class="text-lg font-semibold mb-2">Hızlı Gelişim</h3>
-              <p class="text-gray-400 text-sm">En iyi oyuncularla kendini geliştir.</p>
-            </div>
-            <div class="p-6 bg-white/5 rounded-2xl border border-white/10 hover:scale-105 transition">
-              <h3 class="text-lg font-semibold mb-2">Rekabet</h3>
-              <p class="text-gray-400 text-sm">Sıralamada yerini al.</p>
-            </div>
-            <div class="p-6 bg-white/5 rounded-2xl border border-white/10 hover:scale-105 transition">
-              <h3 class="text-lg font-semibold mb-2">Topluluk</h3>
-              <p class="text-gray-400 text-sm">Aktif bir oyuncu kitlesine katıl.</p>
-            </div>
-          </div>
-        </section>
-        `;
-      } else {
-        app.innerHTML = `
-        <section class="text-center mt-28">
-          <h1 class="text-4xl font-bold glow mb-4">${page.toUpperCase()}</h1>
-          <p class="text-gray-400">${page} sayfası içeriği burada olacak.</p>
-        </section>
-        `;
-      }
-    }
+    <!-- SOL: YORUMLAR -->
+    <div class="space-y-6">
+      <div class="p-6 bg-white/5 border border-white/10 rounded-2xl">
+        <h2 class="text-2xl font-bold mb-2">Notar</h2>
+        <p class="text-gray-400">Burada kendini anlatıyor, sözlerini söylüyor. Çok güçlü ve dikkat çekici bir oyuncu.</p>
+      </div>
 
-    document.querySelectorAll(".nav-link").forEach(link => {
-      link.addEventListener("click", e => {
-        e.preventDefault();
-        const page = link.getAttribute("data-page");
-        render(page);
-      });
-    });
+      <div class="p-6 bg-white/5 border border-white/10 rounded-2xl">
+        <h2 class="text-2xl font-bold mb-2">PlayerX</h2>
+        <p class="text-gray-400">Topluluk hakkında düşüncelerini burada paylaşıyor.</p>
+      </div>
+    </div>
 
-    // default
-    render("home");
-  </script>
+    <!-- SAĞ: BİLGİ -->
+    <div class="flex flex-col justify-center text-left">
+      <p class="text-4xl font-bold mb-4">Site Owner - darkping</p>
+      <p class="text-4xl font-bold text-gray-300">Web Designer - ChatGPT</p>
+    </div>
+
+  </section>
 
 </body>
 </html>
