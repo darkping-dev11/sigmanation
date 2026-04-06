@@ -1,8 +1,8 @@
 export default function List() {
   return `
     <div style="padding:40px;">
-      <h1 style="font-size:30px;">Sıralama Sayfası</h1>
-      <p>Buraya level sistemi gelecek 🔥</p>
+      <h1 style="font-size:30px;">Sıralama</h1>
+      <p>Level sistemi buraya gelecek 🔥</p>
     </div>
   `;
 }
