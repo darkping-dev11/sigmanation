@@ -7,17 +7,17 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      background: radial-gradient(circle at top, #0b0f2a, #050816);
+      background: radial-gradient(circle at top, #1a1a1a, #000000);
     }
     .glow {
-      text-shadow: 0 0 6px rgba(0,255,255,0.4), 0 0 12px rgba(0,255,255,0.25);
+      text-shadow: 0 0 6px rgba(255,255,255,0.2);
     }
     .float {
       animation: float 6s ease-in-out infinite;
     }
     @keyframes float {
       0%,100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
+      50% { transform: translateY(-10px); }
     }
   </style>
 </head>
@@ -26,7 +26,7 @@
   <!-- Navbar -->
   <header class="flex justify-between items-center px-10 py-5 backdrop-blur-md bg-white/5 border-b border-white/10">
     <div class="flex items-center gap-3">
-      <div class="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-bold">Σ</div>
+      <div class="w-8 h-8 flex items-center justify-center rounded-lg bg-white text-black font-bold">Σ</div>
       <div class="flex items-end gap-2">
         <span class="text-lg font-semibold tracking-wide text-gray-200">SIGMANATION</span>
         <span class="text-[10px] text-gray-500 mb-1">v1.0.0</span>
@@ -45,13 +45,13 @@
 
   <!-- HERO -->
   <section class="text-center mt-16 px-6">
-    <p class="text-sm text-cyan-400 mb-3">Türkiye'nin #1 Geometry Dash Topluluğu</p>
+    <p class="text-sm text-gray-400 mb-3">Türkiye'nin #1 Geometry Dash Topluluğu</p>
     <h1 class="text-6xl md:text-7xl font-extrabold tracking-widest mb-6 float">
-      <span class="bg-gradient-to-r from-pink-500 to-orange-400 bg-clip-text text-transparent">
+      <span class="text-white">
         SIGMANATION
       </span>
     </h1>
-    <p class="text-gray-400 max-w-xl mx-auto mb-10 text-lg">
+    <p class="text-gray-500 max-w-xl mx-auto mb-10 text-lg">
       Rekorları kır, seviyeleri fethet, efsane ol.
     </p>
   </section>
@@ -59,23 +59,49 @@
   <!-- STATS -->
   <section class="flex justify-center gap-14 text-center mt-10">
     <div>
-      <p class="text-5xl font-extrabold text-cyan-400 glow">12.847</p>
-      <p class="text-gray-400">Üye</p>
+      <p class="text-5xl font-extrabold text-white glow">12.847</p>
+      <p class="text-gray-500">Üye</p>
     </div>
     <div>
-      <p class="text-5xl font-extrabold text-cyan-400 glow">3.420</p>
-      <p class="text-gray-400">Seviye</p>
+      <p class="text-5xl font-extrabold text-white glow">3.420</p>
+      <p class="text-gray-500">Seviye</p>
     </div>
     <div>
-      <p class="text-5xl font-extrabold text-cyan-400 glow">89.542</p>
-      <p class="text-gray-400">Tamamlama</p>
+      <p class="text-5xl font-extrabold text-white glow">89.542</p>
+      <p class="text-gray-500">Tamamlama</p>
     </div>
     <div>
-      <p class="text-5xl font-extrabold text-cyan-400 glow">156</p>
-      <p class="text-gray-400">Etkinlik</p>
+      <p class="text-5xl font-extrabold text-white glow">156</p>
+      <p class="text-gray-500">Etkinlik</p>
     </div>
   </section>
 
+  <!-- ALT BÖLÜM -->
+  <section class="grid md:grid-cols-2 gap-10 mt-20 px-10 max-w-6xl mx-auto">
+
+    <!-- SOL: YORUMLAR -->
+    <div class="space-y-6">
+      <div class="p-6 bg-white/5 border border-white/10 rounded-2xl">
+        <h2 class="text-2xl font-bold mb-2">Notar</h2>
+        <p class="text-gray-400">Burada kendini anlatıyor, sözlerini söylüyor.</p>
+      </div>
+
+      <div class="p-6 bg-white/5 border border-white/10 rounded-2xl">
+        <h2 class="text-2xl font-bold mb-2">PlayerX</h2>
+        <p class="text-gray-400">Topluluk hakkında düşüncelerini paylaşıyor.</p>
+      </div>
+    </div>
+
+    <!-- SAĞ: BİLGİ -->
+    <div class="flex flex-col justify-center text-left">
+      <p class="text-4xl font-bold mb-4">Site Owner - darkping</p>
+      <p class="text-4xl font-bold text-gray-400">Web Designer - ChatGPT</p>
+    </div>
+
+  </section>
+
+</body>
+</html>
   <!-- ALT BÖLÜM -->
   <section class="grid md:grid-cols-2 gap-10 mt-20 px-10 max-w-6xl mx-auto">
 
