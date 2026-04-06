@@ -1,29 +1,36 @@
 import Home from './pages/home.js'
 import List from './pages/list.js'
-import Ozellikler from './pages/ozellikler.js'
 
+// Sayfa alanı
 const app = document.getElementById("app");
 
+// Sayfalar
 const routes = {
   home: Home,
-  list: List,
-  ozellikler: Ozellikler
+  list: List
 };
 
+// Sayfa render
 function render(page) {
   const Page = routes[page];
-  if (!Page) return;
+
+  if (!Page) {
+    app.innerHTML = "<h1 style='padding:40px'>Sayfa bulunamadı</h1>";
+    return;
+  }
 
   app.innerHTML = Page();
 }
 
-// NAVBAR CLICK
-document.querySelectorAll("[data-page]").forEach(link => {
+// Navbar click
+document.querySelectorAll(".nav-link").forEach(link => {
   link.addEventListener("click", e => {
     e.preventDefault();
-    render(link.dataset.page);
+
+    const page = link.dataset.page;
+    render(page);
   });
 });
 
-// default
+// İlk açılış
 render("home");
