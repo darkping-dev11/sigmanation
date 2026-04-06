@@ -1,9 +1,8 @@
 export default function List() {
   return `
-    <div class="container">
-      <div class="sidebar" id="levelList"></div>
-      <div class="main" id="levelDetail"></div>
-      <div class="records" id="records"></div>
+    <div style="padding:40px;">
+      <h1 style="font-size:30px;">Sıralama Sayfası</h1>
+      <p>Buraya level sistemi gelecek 🔥</p>
     </div>
   `;
 }
