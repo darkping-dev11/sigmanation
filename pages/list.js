@@ -94,7 +94,6 @@ function renderLevel(i) {
       ${lvl.name}
     </h1>
 
-    <!-- PACKS (VİDEO ÜSTÜ) -->
     <div style="margin-bottom:10px;">
       ${lvl.packs.map(p => `
         <span style="background:#111; padding:6px 12px; margin-right:6px; border-radius:8px; font-size:14px;">
@@ -103,10 +102,8 @@ function renderLevel(i) {
       `).join("")}
     </div>
 
-    <!-- VIDEO -->
     <iframe width="100%" height="320" src="${lvl.video}" frameborder="0"></iframe>
 
-    <!-- TAGS (VİDEO ALTI) -->
     <div style="margin-top:10px;">
       ${lvl.tags.map(t => `
         <span style="background:#1a1a1a; padding:6px 12px; margin:5px; display:inline-block; border-radius:10px; font-size:14px;">
@@ -115,7 +112,6 @@ function renderLevel(i) {
       `).join("")}
     </div>
 
-    <!-- BİLGİLER -->
     <div style="margin-top:15px; font-size:16px; line-height:1.8; color:#ccc;">
       <p><b>ID:</b> ${lvl.id}</p>
       <p><b>Publisher:</b> ${lvl.publisher}</p>
@@ -126,7 +122,6 @@ function renderLevel(i) {
       <p><b>NLW:</b> ${lvl.nlw}</p>
     </div>
 
-    <!-- SONG -->
     <div style="margin-top:15px;">
       <b style="font-size:18px;">Song:</b> ${lvl.song.id}
       <a href="${lvl.song.url}" target="_blank"
@@ -135,15 +130,17 @@ function renderLevel(i) {
       </a>
     </div>
 
-    <!-- CREATORS -->
     <div style="margin-top:15px;">
       <b style="font-size:18px;">Creators:</b><br>
       <span style="color:#aaa; font-size:15px;">
         ${lvl.creators.join(", ")}
       </span>
     </div>
-    renderRecords(lvl.records);
   `;
+
+  // ✅ DOĞRU YER
+  renderRecords(lvl.records);
+}
 
   function renderRecords(records) {
   const box = document.getElementById("records");
