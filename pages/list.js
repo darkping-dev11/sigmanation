@@ -142,6 +142,7 @@ function renderLevel(i) {
         ${lvl.creators.join(", ")}
       </span>
     </div>
+    renderRecords(lvl.records);
   `;
 
   function renderRecords(records) {
