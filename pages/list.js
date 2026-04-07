@@ -144,18 +144,35 @@ function renderLevel(i) {
     </div>
   `;
 
-  renderRecords(lvl.records);
-}
-function renderRecords(records) {
+  function renderRecords(records) {
   const box = document.getElementById("records");
-  box.innerHTML = "";
+
+  box.innerHTML = `
+    <h2 style="font-size:26px; font-weight:bold; padding:15px;">
+      Records
+    </h2>
+  `;
 
   records.forEach(r => {
     const div = document.createElement("div");
 
     div.innerHTML = `
-      <div style="padding:10px; border-bottom:1px solid #222;">
-        <p>${r.name}</p>
+      <div style="
+        margin:10px;
+        padding:12px;
+        background:#111;
+        border-radius:10px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        font-size:18px;
+      ">
+        <span style="font-weight:bold;">${r.name}</span>
+
+        <a href="${r.video}" target="_blank"
+          style="background:#222; padding:6px 10px; border-radius:6px;">
+          ▶
+        </a>
       </div>
     `;
 
