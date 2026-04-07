@@ -5,21 +5,27 @@
     "publisher": "Bianox",
     "verifier": "Technical",
     "video": "https://www.youtube.com/embed/VIDEO_ID",
+
+    "creators": ["Rustam","YakobNugget","BIANOX"],
+    "points": 193.1,
+    "enjoyment": 47.98,
+
+    "song": {
+      "id": 739991,
+      "url": "https://youtube.com"
+    },
+
+    "gddl": 34,
+    "nlw": "-",
+
     "tags": ["2.1","XXL","Timings"],
+    "packs": ["Top 1 Pack III"],
+
     "records": [
       {
         "name": "Zeronium",
         "video": "https://youtube.com"
       }
     ]
-  },
-  {
-    "id": 111111,
-    "name": "Silent Clubstep",
-    "publisher": "Unknown",
-    "verifier": "PlayerX",
-    "video": "https://www.youtube.com/embed/VIDEO_ID",
-    "tags": ["Extreme","Memory"],
-    "records": []
   }
 ]
