@@ -30,7 +30,10 @@
     "tags": ["2.1", "XXL", "Learny", "Memory", "Nerve Control"],
     "packs": ["Deimos"],
 
-    "records": []
+    "records": [{
+        "name": "Yarkii",
+        "video": "https://www.youtube.com/watch?v=YYDK4xORmK0&t=741s"
+      }]
   },
 
   {
