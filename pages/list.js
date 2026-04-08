@@ -64,7 +64,7 @@ function renderList() {
 
     div.innerHTML = `
       <div style="padding:12px; border-bottom:1px solid #1a1a1a;">
-        <span style="color:#888;">#${i+1}</span>
+        <span style="color:#888;">#${lvl.rank}</span>
         <span style="margin-left:10px;">${lvl.name}</span>
       </div>
     `;
