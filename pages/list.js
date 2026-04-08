@@ -40,8 +40,8 @@ function initList() {
   fetch("levels.json")
     .then(res => res.json())
     .then(data => {
-      levels = data;
-      filtered = data;
+      levels = data.sort((a, b) => a.rank - b.rank);
+      filtered = levels;
       renderList();
       renderLevel(0);
 
