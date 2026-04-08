@@ -1,6 +1,34 @@
 [
   {
     "rank": 1,
+    "id": 89187968,
+    "name": "Edge of Destiny",
+    "publisher": "CDMusic",
+    "verifier": "Holojen",
+    "video": "https://www.youtube.com/watch?v=FGQE1XwD_sc&list=PLJHYdCN91MRis-CnscPTsROM7bGIpprUz",
+
+    "creators": ["Rustam","YakobNugget","BIANOX"],
+
+    "points": 193.1,
+    "enjoyment": 54.18,
+    "gddl": 36,
+    "nlw": "-",
+
+    "song": {
+      "id": 167229,
+      "url": "https://youtube.com"
+    },
+
+    "tags": ["2.1","XXL","Timings", "Nerve Control", "Ship", "Ufo", "Duals"],
+    "packs": ["Top 1 Pack"],
+
+    "records": [
+    ]
+  },
+
+  
+  {
+    "rank": 2,
     "id": 52374844,
     "name": "LIMBO",
     "publisher": "MindCap",
@@ -28,42 +56,13 @@
     },
 
     "tags": ["2.1", "XXL", "Learny", "Memory", "Nerve Control"],
-    "packs": ["Deimos"],
+    "packs": ["akıl"],
 
     "records": [{
         "name": "Yarkii",
         "video": "https://www.youtube.com/watch?v=YYDK4xORmK0&t=741s"
-      }]
-  },
-
-  {
-    "rank": 2,
-    "id": 52374843,
-    "name": "Zodiac",
-    "publisher": "Bianox",
-    "verifier": "Technical",
-    "video": "https://www.youtube.com/embed/4NfVjGXWb3k",
-
-    "creators": ["Rustam","YakobNugget","BIANOX"],
-
-    "points": 193.1,
-    "enjoyment": 47.98,
-    "gddl": 34,
-    "nlw": "-",
-
-    "song": {
-      "id": 739991,
-      "url": "https://youtube.com"
-    },
-
-    "tags": ["2.1","XXL","Timings"],
-    "packs": ["Top 1 Pack III"],
-
-    "records": [
-      {
-        "name": "Zeronium",
-        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
       }
     ]
   }
+ 
 ]
