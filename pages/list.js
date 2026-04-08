@@ -90,55 +90,131 @@ function renderLevel(i) {
   const box = document.getElementById("levelDetail");
 
   box.innerHTML = `
-    <h1 style="font-size:34px; font-weight:bold; margin-bottom:10px;">
+    <h1 style="font-size:36px; font-weight:800; margin-bottom:15px;">
       ${lvl.name}
     </h1>
 
-    <div style="margin-bottom:10px;">
+    <!-- PACKS -->
+    <div style="margin-bottom:12px;">
       ${lvl.packs.map(p => `
-        <span style="background:#111; padding:6px 12px; margin-right:6px; border-radius:8px; font-size:14px;">
+        <span style="
+          background:#111;
+          padding:6px 12px;
+          margin-right:6px;
+          border-radius:8px;
+          font-size:13px;
+        ">
           ${p}
         </span>
       `).join("")}
     </div>
 
-    <iframe width="100%" height="320" src="${lvl.video}" frameborder="0"></iframe>
+    <!-- VIDEO -->
+    <iframe width="100%" height="340" src="${lvl.video}" frameborder="0"></iframe>
 
+    <!-- TAGS -->
     <div style="margin-top:10px;">
       ${lvl.tags.map(t => `
-        <span style="background:#1a1a1a; padding:6px 12px; margin:5px; display:inline-block; border-radius:10px; font-size:14px;">
+        <span style="
+          background:#1a1a1a;
+          padding:6px 12px;
+          margin:5px;
+          display:inline-block;
+          border-radius:10px;
+          font-size:13px;
+        ">
           ${t}
         </span>
       `).join("")}
     </div>
 
-    <div style="margin-top:15px; font-size:16px; line-height:1.8; color:#ccc;">
-      <p><b>ID:</b> ${lvl.id}</p>
-      <p><b>Publisher:</b> ${lvl.publisher}</p>
-      <p><b>Verifier:</b> ${lvl.verifier}</p>
-      <p><b>Points:</b> ${lvl.points}</p>
-      <p><b>Enjoyment:</b> ${lvl.enjoyment}</p>
-      <p><b>GDDL:</b> ${lvl.gddl}</p>
-      <p><b>NLW:</b> ${lvl.nlw}</p>
+    <!-- GRID BİLGİ -->
+    <div style="
+      margin-top:25px;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:25px;
+      border-top:1px solid #222;
+      padding-top:20px;
+    ">
+
+      <div>
+        <p style="color:#777; font-size:12px;">LEVEL ID</p>
+        <p style="font-size:28px; font-weight:bold;">${lvl.id}</p>
+      </div>
+
+      <div>
+        <p style="color:#777; font-size:12px;">LIST POINTS</p>
+        <p style="font-size:28px; font-weight:bold;">${lvl.points}</p>
+      </div>
+
+      <div>
+        <p style="color:#777; font-size:12px;">ENJOYMENT</p>
+        <p style="font-size:28px; font-weight:bold;">${lvl.enjoyment}</p>
+      </div>
+
+      <div>
+        <p style="color:#777; font-size:12px;">SONG</p>
+        <p style="font-size:22px;">
+          ${lvl.song.id}
+          <a href="${lvl.song.url}" target="_blank">↗</a>
+        </p>
+      </div>
+
+      <div>
+        <p style="color:#777; font-size:12px;">NLW TIER</p>
+        <p style="font-size:22px;">${lvl.nlw}</p>
+      </div>
+
+      <div>
+        <p style="color:#777; font-size:12px;">GDDL TIER</p>
+        <p style="font-size:22px;">${lvl.gddl}</p>
+      </div>
+
     </div>
 
-    <div style="margin-top:15px;">
-      <b style="font-size:18px;">Song:</b> ${lvl.song.id}
-      <a href="${lvl.song.url}" target="_blank"
-        style="margin-left:10px; padding:6px 12px; background:#222; border-radius:6px; font-size:14px;">
-        ▶
-      </a>
-    </div>
+    <!-- ALT BİLGİ -->
+    <div style="margin-top:25px;">
 
-    <div style="margin-top:15px;">
-      <b style="font-size:18px;">Creators:</b><br>
-      <span style="color:#aaa; font-size:15px;">
-        ${lvl.creators.join(", ")}
+      <p style="color:#777;">PUBLISHER</p>
+      <span style="
+        background:#111;
+        padding:6px 10px;
+        border-radius:8px;
+        display:inline-block;
+      ">
+        ${lvl.publisher}
       </span>
+
+      <p style="color:#777; margin-top:12px;">VERIFIER</p>
+      <span style="
+        background:#111;
+        padding:6px 10px;
+        border-radius:8px;
+        display:inline-block;
+      ">
+        ${lvl.verifier}
+      </span>
+
+      <p style="color:#777; margin-top:12px;">CREATORS</p>
+      <div style="margin-top:6px;">
+        ${lvl.creators.map(c => `
+          <span style="
+            background:#111;
+            padding:6px 10px;
+            margin:4px;
+            display:inline-block;
+            border-radius:8px;
+            font-size:13px;
+          ">
+            ${c}
+          </span>
+        `).join("")}
+      </div>
+
     </div>
   `;
 
-  // ✅ DOĞRU YER
   renderRecords(lvl.records);
 }
 
