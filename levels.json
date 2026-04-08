@@ -79,6 +79,37 @@
         "video": "https://www.youtube.com/watch?v=YYDK4xORmK0&t=741s"
       }
     ]
+  },
+
+  {
+    "rank": 3,
+    "id": 72744364,
+    "name": "Hard Machine",
+    "publisher": "Komp",
+    "verifier": "Notar",
+    "video": "https://www.youtube.com/watch?v=6BGzwGf5tNo",
+
+    "creators": [
+      "nikroplays",
+      "viri",
+      "Komp"
+    ],
+
+    "points": 500,
+    "enjoyment": 44.53,
+    "gddl": 34,
+    "nlw": "-",
+
+    "song": {
+      "id": "DEFAULT",
+      "url": "#"
+    },
+
+    "tags": ["2.1", "Timings", "Slow-Paced", "Ship"],
+    "packs": ["Time Machine Pack"],
+
+    "records": [
+    ]
   }
  
 ]
