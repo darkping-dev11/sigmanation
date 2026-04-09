@@ -1,0 +1,26 @@
+[
+  {
+    "name": "darkping",
+    "username": "darkping",
+    "role": "Owner",
+    "avatar": "https://i.pravatar.cc/100?img=1"
+  },
+  {
+    "name": "Notar",
+    "username": "notar",
+    "role": "Owner",
+    "avatar": "https://i.pravatar.cc/100?img=2"
+  },
+  {
+    "name": "Draconis",
+    "username": "draconis",
+    "role": "Owner 2",
+    "avatar": "https://i.pravatar.cc/100?img=3"
+  },
+  {
+    "name": "Admin",
+    "username": "admin",
+    "role": "Admin",
+    "avatar": "https://i.pravatar.cc/100?img=4"
+  }
+]
