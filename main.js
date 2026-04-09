@@ -1,10 +1,12 @@
 import List from './pages/list.js'
+import Uyeler from "./uyeler.js";
 
 const app = document.getElementById("app");
 
 // SADECE JS SAYFALAR
 const routes = {
-  list: List
+  list: List,
+  uyeler: Uyeler
 };
 
 function render(page) {
