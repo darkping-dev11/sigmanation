@@ -1,100 +1,91 @@
-export default function Üyeler() {
+export default function Uyeler() {
+  setTimeout(initUyeler, 0);
+
   return `
-  <div style="padding:30px; max-width:1100px; margin:auto;">
+  <div style="padding:40px; max-width:1200px; margin:auto;">
 
     <h1 style="font-size:32px; font-weight:bold; margin-bottom:20px;">
-      Members
+      Üyeler
     </h1>
 
-    <div style="
-      display:grid;
-      grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
-      gap:20px;
-    ">
-
-      ${users.map(u => `
-        <div style="
-          background:#111;
-          border:1px solid #222;
-          border-radius:14px;
-          padding:15px;
-          display:flex;
-          align-items:center;
-          gap:12px;
-          transition:0.2s;
-        "
-        onmouseover="this.style.transform='scale(1.03)'"
-        onmouseout="this.style.transform='scale(1)'"
-        >
-
-          <!-- AVATAR -->
-          <img src="${u.avatar}" style="
-            width:45px;
-            height:45px;
-            border-radius:50%;
-          ">
-
-          <!-- INFO -->
-          <div>
-            <div style="font-size:16px; font-weight:bold;">
-              ${u.name}
-            </div>
-
-            <div style="font-size:13px; color:#888;">
-              @${u.username}
-            </div>
-
-            <div style="
-              margin-top:5px;
-              font-size:11px;
-              background:#222;
-              display:inline-block;
-              padding:3px 8px;
-              border-radius:6px;
-            ">
-              ${u.role}
-            </div>
-
-          </div>
-
-        </div>
-      `).join("")}
-
+    <div id="uyeList"
+      style="
+        display:grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap:20px;
+      ">
     </div>
 
   </div>
   `;
 }
 
-const users = [
-  {
-    name: "darkping",
-    username: "darkping",
-    role: "Owner",
-    avatar: "https://i.pravatar.cc/100?img=1"
-  },
-  {
-    name: "Notar",
-    username: "notar",
-    role: "Owner",
-    avatar: "https://i.pravatar.cc/100?img=2"
-  },
-  {
-    name: "Draconis",
-    username: "draconis",
-    role: "Owner",
-    avatar: "https://i.pravatar.cc/100?img=3"
-  },
-  {
-    name: "Developer1",
-    username: "dev1",
-    role: "Developer",
-    avatar: "https://i.pravatar.cc/100?img=4"
-  },
-  {
-    name: "Moderator1",
-    username: "mod1",
-    role: "Moderator",
-    avatar: "https://i.pravatar.cc/100?img=5"
-  }
-];
+let uyeler = [];
+
+function initUyeler() {
+  fetch("uyeler.json")
+    .then(res => res.json())
+    .then(data => {
+      uyeler = data;
+      renderUyeler();
+    });
+}
+
+function renderUyeler() {
+  const container = document.getElementById("uyeList");
+  container.innerHTML = "";
+
+  uyeler.forEach(uye => {
+    const div = document.createElement("div");
+
+    div.innerHTML = `
+      <div style="
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 14px;
+        padding: 15px;
+        display:flex;
+        align-items:center;
+        gap:12px;
+        transition:0.2s;
+      ">
+
+        <!-- PROFİL RESMİ -->
+        <img src="${uye.avatar}" 
+          style="
+            width:50px;
+            height:50px;
+            border-radius:50%;
+            object-fit:cover;
+          ">
+
+        <!-- BİLGİ -->
+        <div style="flex:1;">
+          <div style="font-size:16px; font-weight:bold;">
+            ${uye.name}
+          </div>
+
+          <div style="font-size:13px; color:#888;">
+            @${uye.username}
+          </div>
+
+          <!-- ROL -->
+          <div style="margin-top:6px;">
+            <span style="
+              background:#1f2937;
+              padding:3px 8px;
+              border-radius:6px;
+              font-size:12px;
+              color:#ccc;
+            ">
+              ${uye.role}
+            </span>
+          </div>
+        </div>
+
+      </div>
+    `;
+
+    container.appendChild(div);
+  });
+}
