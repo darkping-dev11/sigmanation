@@ -1,4 +1,4 @@
-export default function Members() {
+export default function Üyeler() {
   return `
   <div style="padding:30px; max-width:1100px; margin:auto;">
 
