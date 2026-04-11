@@ -4,23 +4,22 @@ export default function List() {
   return `
   <div style="display:flex; height:100vh; background:#0a0a0a;">
 
-    <!-- SOL -->
+
     <div style="width:25%; border-right:1px solid #222; display:flex; flex-direction:column;">
 
-      <!-- SEARCH -->
+     
       <div style="padding:15px; border-bottom:1px solid #222;">
         <input id="search" placeholder="Level Search"
           style="width:100%; padding:10px; background:#111; border:none; color:white; outline:none;">
       </div>
 
-      <!-- LIST -->
       <div id="levelList" style="overflow-y:auto; flex:1;"></div>
     </div>
 
-    <!-- ORTA -->
+   
     <div id="levelDetail" style="width:50%; padding:20px;"></div>
 
-    <!-- SAĞ -->
+    
     <div style="width:25%; border-left:1px solid #222; display:flex; flex-direction:column;">
       <div style="padding:15px; border-bottom:1px solid #222; font-weight:bold;">
         Records
@@ -94,7 +93,6 @@ function renderLevel(i) {
       ${lvl.name}
     </h1>
 
-    <!-- PACKS -->
     <div style="margin-bottom:12px;">
       ${lvl.packs.map(p => `
         <span style="
@@ -109,10 +107,10 @@ function renderLevel(i) {
       `).join("")}
     </div>
 
-    <!-- VIDEO -->
+   
     <iframe width="100%" height="340" src="${lvl.video}" frameborder="0"></iframe>
 
-    <!-- TAGS -->
+    
     <div style="margin-top:10px;">
       ${lvl.tags.map(t => `
         <span style="
@@ -128,7 +126,7 @@ function renderLevel(i) {
       `).join("")}
     </div>
 
-    <!-- GRID BİLGİ -->
+    
     <div style="
       margin-top:25px;
       display:grid;
@@ -173,7 +171,7 @@ function renderLevel(i) {
 
     </div>
 
-    <!-- ALT BİLGİ -->
+    
     <div style="margin-top:25px;">
 
       <p style="color:#777;">PUBLISHER</p>
