@@ -3,7 +3,7 @@ import Uyeler from "./uyeler.js";
 
 const app = document.getElementById("app");
 
-// SADECE JS SAYFALAR
+
 const routes = {
   list: List,
   uyeler: Uyeler
