@@ -11,7 +11,6 @@ const routes = {
 
 function render(page) {
 
-  // 👉 HOME ise eski haline dön
   if (page === "home") {
     location.reload(); // sayfayı yeniler, ana sayfa geri gelir
     return;
@@ -27,7 +26,7 @@ function render(page) {
   app.innerHTML = Page();
 }
 
-// NAVBAR
+
 document.querySelectorAll(".nav-link").forEach(link => {
   link.addEventListener("click", e => {
     e.preventDefault();
