@@ -12,7 +12,7 @@ const routes = {
 function render(page) {
 
   if (page === "home") {
-    location.reload(); // sayfayı yeniler, ana sayfa geri gelir
+    location.reload(); 
     return;
   }
 
