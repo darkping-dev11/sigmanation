@@ -50,7 +50,7 @@ function renderUyeler() {
         transition:0.2s;
       ">
 
-        <!-- PROFİL RESMİ -->
+     
         <img src="${uye.avatar}" 
           style="
             width:50px;
@@ -59,7 +59,7 @@ function renderUyeler() {
             object-fit:cover;
           ">
 
-        <!-- BİLGİ -->
+      
         <div style="flex:1;">
           <div style="font-size:16px; font-weight:bold;">
             ${uye.name}
@@ -69,7 +69,7 @@ function renderUyeler() {
             @${uye.username}
           </div>
 
-          <!-- ROL -->
+        
           <div style="margin-top:6px;">
             <span style="
               background:#1f2937;
